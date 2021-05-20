@@ -4,10 +4,12 @@ const convertFahrToCelsius = (n) => {
   if(isNaN(toNum)){
     return `"${n}" is not a valid number but a/an ${typeof n}`;
   }
-    return (toNum - 32) * 5/9;
+    return ((toNum - 32) * 5/9).toFixed(4);
 }
 
 console.log(convertFahrToCelsius('to'));
+console.log(convertFahrToCelsius('0'));
+console.log(convertFahrToCelsius(0));
 
 
 //function for checking YuGiOh
@@ -50,3 +52,5 @@ const checkYuGiOh = (n) => {
 }
 
 console.log(checkYuGiOh('100'));
+console.log(checkYuGiOh('hi'));
+console.log(checkYuGiOh(50));
